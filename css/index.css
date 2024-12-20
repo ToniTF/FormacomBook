@@ -1,0 +1,139 @@
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 20px;
+}
+
+
+/* Encabezado */
+header {
+    background-color: blue;
+    font-style: oblique;
+    color: rgb(0, 255, 106);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Logo */
+#logo {
+    width: 80px;
+    height: 80px;
+}
+
+/* Título del encabezado */
+h1 {
+    font-size: 50px;
+}
+
+/* Fondo rayado con dos colores */
+body {
+    background: repeating-linear-gradient(
+        45deg,          /* Ángulo del gradiente */
+        #50a2ff,        /* Color 1 */
+        #ff7f50 10px,   /* Color 1 hasta 10px */
+        #1eff83 10px,   /* Color 2 empieza en 10px */
+        #1e90ff 20px    /* Color 2 hasta 20px */
+    );
+    height: 100vh;      /* Altura completa de la ventana */
+    margin: 0;          /* Sin márgenes */
+}
+
+
+/* Artículos */
+article {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+/* Imágenes dentro de los artículos */
+article img {
+    width: 100%;
+}
+
+/* Sección de fotos */
+#seccionFotos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Contenedor de imágenes */
+.contenedorImg {
+    height: 290px;
+    overflow: hidden;
+}
+
+/* Contenedor del texto y los íconos */
+article div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+/* Texto del título y el ícono */
+article h3 {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+/* Icono de corazón */
+.fa-heart {
+    color: red;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+/* Contador */
+span {
+    font-size: 18px;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    /* Ajustes para pantallas medianas */
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    article {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes para pantallas pequeñas */
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    article {
+        width: 100%;
+    }
+
+    .contenedorImg {
+        height: auto;
+    }
+}
